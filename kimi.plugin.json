@@ -1,0 +1,37 @@
+{
+  "name": "omniroute",
+  "version": "1.0.0",
+  "description": "Connects Kimi Code to a running OmniRoute AI gateway over MCP, including routing, providers, combos, cache, compression, and memory tools.",
+  "keywords": [
+    "omniroute",
+    "mcp",
+    "ai-gateway",
+    "llm-routing",
+    "kimi-code"
+  ],
+  "author": {
+    "name": "Enlace Enterprises",
+    "email": "enlace.enterprises@gmail.com"
+  },
+  "homepage": "https://github.com/projectsaibg/omniroute-claude-plugin",
+  "license": "MIT",
+  "interface": {
+    "displayName": "OmniRoute",
+    "shortDescription": "OmniRoute MCP tools for Kimi Code",
+    "longDescription": "Connect Kimi Code to an existing OmniRoute instance over Streamable HTTP. Uses OMNIROUTE_API_KEY from the environment when authentication is required; no credentials are stored in this plugin.",
+    "developerName": "Enlace Enterprises",
+    "websiteURL": "https://omniroute.online",
+    "mcpOverrides": {
+      "omniroute": {
+        "displayName": "OmniRoute MCP",
+        "description": "Routing, provider, combo, cache, compression, memory, and other gateway tools"
+      }
+    }
+  },
+  "mcpServers": {
+    "omniroute": {
+      "url": "http://localhost:20128/api/mcp/stream",
+      "bearerTokenEnvVar": "OMNIROUTE_API_KEY"
+    }
+  }
+}
